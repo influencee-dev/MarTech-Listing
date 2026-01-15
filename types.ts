@@ -1,4 +1,3 @@
-
 export interface MartechTool {
   id: number;
   name: string;
@@ -10,6 +9,7 @@ export interface MartechTool {
   integrations: string[];
   pricing_model: 'Free' | 'Freemium' | 'Paid' | 'Custom';
   pricing_starting_at: string;
+  price_numeric?: number; // Added for advanced filtering
   location: string;
   logo_url: string;
   cover_url: string;
@@ -18,6 +18,8 @@ export interface MartechTool {
 }
 
 export type View = 'HOME' | 'LISTING' | 'PROFILE' | 'SUBMIT';
+
+export type PriceFilter = 'ALL' | 'FREE' | 'ENTRY' | 'PRO' | 'ENTERPRISE';
 
 export interface Category {
   id: string;
